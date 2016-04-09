@@ -16,7 +16,7 @@ html, body
 
 #wrap1
 {
-	margin-top: 10px;
+	margin: 10px;
 	margin-bottom: 30px;
 }
 
@@ -28,6 +28,7 @@ html, body
 {
 	height: 30px;
 	line-height:30px;
+	margin: 0px 10px;
 }
 
 #site_title
