@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1460172598 source:c:\users\raymai\desktop\stringx_h\stringx.c
+	"stringx.h"
+
+1460174823 source:c:\users\raymai\desktop\stringx_h\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"stringx.h"
+
+1460115712 c:\users\raymai\desktop\stringx_h\stringx.h
+	<wchar.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<stdarg.h>
+
+1460047672 c:\users\raymai\desktop\stringx_h\stringx_wchar.h
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<wchar.h>
+
+1460047864 source:c:\users\raymai\desktop\stringx_h\stringx_wchar.c
+	"stringx_wchar.h"
+
+1460172598 source:c:\users\raymai\desktop\stringx\stringx.c
+	"stringx.h"
+
+1460115712 c:\users\raymai\desktop\stringx\stringx.h
+	<wchar.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<stdarg.h>
+
+1460183018 source:c:\users\raymai\desktop\stringx\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"stringx.h"
+
