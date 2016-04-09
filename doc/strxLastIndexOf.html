@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="../synhlighter/shCore.js"></script>
+<script type="text/javascript" src="../synhlighter/shBrushCpp.js"></script>
+<link type="text/css" rel="stylesheet" href="../synhlighter/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<pre class="brush: c;">
+// Prototype
+size_t strxLastIndexOf(const STRX_CHAR *str, const STRX_CHAR *key, STRX_FLAGS f);
+
+// NOTE:
+// If can't find the key, return value IS NOT -1, but the length of str.
+</pre>
+
+<pre class="brush: c;">
+// Example
+STRX_FLAGS f = STRX_CASE_INSENSITIVE;
+const char *str = "One does not simply foo the bar.";
+size_t i;
+
+// Find last 'o'
+i = strxLastIndexOf(str, "o", f);
+// Ignore first 10 chars, and find last 'o'
+i = strxIndexOf(str + 10, "o", f);
+// Ignore first i chars, and find last 'a' or 'e'
+i = strxIndexOf(str + i, "ae", f | STRX_KEY_AS_SINGLE_CHAR);
+
+// It can be used like "EndsWith" function too.
+char input[255];
+// input = GetUserInput();
+size_t len = strlen(input);
+if (strxLastIndexOf(input, "desu", f) == len - strlen("desu"))
+{
+	// The input ends with "desu"
+}
+else
+{
+	// Do something else
+}
+</pre>

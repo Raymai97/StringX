@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="../synhlighter/shCore.js"></script>
+<script type="text/javascript" src="../synhlighter/shBrushCpp.js"></script>
+<link type="text/css" rel="stylesheet" href="../synhlighter/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<pre class="brush: c;">
+// Prototype
+bool strxIs(const STRX_CHAR *str1, const STRX_CHAR *str2, STRX_FLAGS f);
+</pre>
+
+<pre class="brush: c;">
+// This function is just like strcmp, but return bool instead of int.
+char input[255];
+printf("[1] Continue \n");
+printf("[2] New game \n");
+printf("[3] Select level \n");
+printf("[4] Options \n");
+printf("[5] Quit game \n");
+
+// input = GetUserInput();
+
+STRX_FLAGS f = STRX_CASE_INSENSITIVE;
+if (strxIs(input, "1", f)) {}
+else if (strxIs(input, "2", f)) {}
+else if (strxIs(input, "3", f)) {}
+else if (strxIs(input, "4", f)) {}
+else if (strxIs(input, "5", f)) {}
+else { printf("Invalid input \n"); }
+
+</pre>
+

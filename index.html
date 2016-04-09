@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>StringX - eXtending string.h</title>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<script type="text/javascript">
+		function loadDoc(keyword){
+			window.name = keyword;
+			window.location = "./doc.html";
+		}
+		</script>
+		<script type="text/javascript" src="synhlighter/shCore.js"></script>
+		<script type="text/javascript" src="synhlighter/shBrushCpp.js"></script>
+		<link type="text/css" rel="stylesheet" href="synhlighter/shCoreDefault.css"/>
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+	</head>
+	<body><div id="wrap">
+		<div id="wrap1">
+		<div id="site_title">StringX
+			<table id="site_navbar">
+				<td><a class="navbarItem selected" href="./index.html">introduction</a></td>
+				<td><a class="navbarItem" href="./doc.html">documentation</td>
+				<td><a class="navbarItem" href="https://www.github.com/raymai97/StringX/">get on github</a></td>
+			</table>
+		</div>
+		<div id="site_subtitle">A free lightweight string processing library for C</div><p>
+		</div>
+		<div id="wrap2">
+		<ul>
+		<li>What does StringX provides:</li><br>
+			<ul>
+			<li><a class="code" href="#" onclick="loadDoc('Is')">strxIs</a> - Compare string </li>
+			<li><a class="code" href="#" onclick="loadDoc('Has')">strxHas</a> - Check if string contain keyword </li>
+			<li><a class="code" href="#" onclick="loadDoc('Count')">strxCount</a> - Count occurences of keyword </li>
+			<li><a class="code" href="#" onclick="loadDoc('IndexOf')">strxIndexOf</a> - Get index of the FIRST keyword </li>
+			<li><a class="code" href="#" onclick="loadDoc('LastIndexOf')">strxLastIndexOf</a> - Get index of the LAST keyword </li>
+			<li><a class="code" href="#" onclick="loadDoc('Split')">strxSplit</a> - Split string into string array </li>
+			<li><a class="code" href="#" onclick="loadDoc('Cat')">strxCat</a> - Concatenate multiple strings to one </li>
+			<li><a class="code" href="#" onclick="loadDoc('Substr')">strxSubstr</a> - Extract the string from index A to B </li>
+			<li><a class="code" href="#" onclick="loadDoc('UpperAndLower')">strxUpper and strxLower</a> - Get string in UPPERCASE / lowercase </li>
+			</ul><p>
+
+		<li>Why StringX?</li><br>
+			Have you ever tried to code like this?
+			<pre class="brush: c;">
+				if (strcmp(input, "exit")) // oops! missing '== 0'...
+				{ ...
+			</pre>
+			With StringX, it will be
+			<pre class="brush: c;">
+				if (strxIs(input, "exit", 0)) // elegant!
+				{ ...
+			</pre>
+			where the 3rd argument can be replaced with STRX_FLAGS.
+			<pre class="brush: c;">
+				STRX_FLAGS f = STRX_CASE_INSENSITIVE; // most users aren't case-sensitive
+				if (strxIs(input, "exit", f)) {...}
+				else if (strxIs(input, "help", f)) {...}
+			</pre>
+			With STRX_FLAGS, many things work wonder.
+			<pre class="brush: c;">
+				// If contain the ENTIRE keyword...
+				if (strxHas(input, F_BOMB_WORD, f)) {...}
+
+				// If contain ONE of the keyword...
+				if (strxHas(input, INVALID_CHARS, f | STRX_KEY_AS_SINGLE_CHAR)) {...}
+			</pre>
+			StringX also supports both ASCII and UTF-16 char type.<br>
+			To enable wchar_t support, just define _STRINGX_USE_WCHAR in compiler settings.
+			<p>
+			<img src="./define_wchar.png">
+			<p>
+
+		<li>StringX is eXtension of string.h, not replacement</li><br>
+			StringX doesn't completely reinvent the wheel. For example, why would one re-do the strlen()?<br>
+			The stringx.h includes string.h, so it is like string.h extension.
+			<p>
+		</ul>
+		<br><br>
+		</div>
+		<div id="wrap3">
+		This website uses slightly-modified <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a>.<br>
+		</div>
+	</div></body>
+</html>

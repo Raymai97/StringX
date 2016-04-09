@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="../synhlighter/shCore.js"></script>
+<script type="text/javascript" src="../synhlighter/shBrushCpp.js"></script>
+<link type="text/css" rel="stylesheet" href="../synhlighter/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<pre class="brush: c;">
+// Prototype
+STRX_CHAR *strxSubstr(const STRX_CHAR *str, int offset, size_t count);
+</pre>
+
+<pre class="brush: c;">
+// Do you know this song?
+const char *str = "Zankoku na Tenshi no you ni, Shounen yo Shinwa ni nare";
+
+// Substring from the last 25 chars for 10 chars
+printf("%s ", strxSubstr(str, -25, 10));
+
+// Substring from index 11 for 6 chars
+printf("%s ", strxSubstr(str, 11, 6));
+
+// Substring the last 7 chars
+printf("%s \n\n", strxSubstr(str, -7, 7));
+
+// Guess what is the output ;)
+
+// for off-topic lover:
+// Zankoku = cruel
+// Tenshi = angel
+// Shounen = boy
+// Shinwa = legend/myth
+// xxx ni nare = go become xxx
+
+</pre>

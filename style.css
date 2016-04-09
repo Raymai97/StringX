@@ -1,0 +1,98 @@
+html, body
+{
+	font-family: "Times New Roman";
+	font-size: 16px;
+	margin: 0;
+	height: 100%;
+	min-height: 100%;
+}
+
+#wrap
+{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#wrap1
+{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#wrap2
+{
+}
+
+#wrap3
+{
+	height: 30px;
+	line-height:30px;
+}
+
+#site_title
+{
+	font-size: 40px;
+}
+
+#site_subtitle
+{
+	font-size: 22px;
+}
+
+#site_navbar
+{
+	display: inline;
+	float: right;
+}
+
+a.navbarItem:link, a.navbarItem:visited
+{
+	color: #000000;
+	font-family: "Consolas", "Lucida Console", monospace;
+	font-size: 20px;
+	font-weight: 900;
+	text-decoration: none;
+	padding-right: 30px;
+}
+a.navbarItem:hover, a.navbarItem:active
+{
+	color: #0000FF;
+	text-decoration: underline;
+}
+a.selected:link, a.selected:visited
+{
+	color: #FF0000;
+}
+
+a:link, a:visited
+{
+	color: #0000FF;
+}
+
+a:hover, a:active
+{
+	color: #FF0000;
+}
+
+.docTable
+{
+	border-collapse: collapse;
+}
+.docTable td,.docTable th
+{
+	padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+}
+.docTable tr:hover
+{
+	background-color: #F0F0F0;
+}
+
+.code
+{
+	font-family: "Consolas";
+	font-size: 16px;
+}
+

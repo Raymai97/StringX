@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="../synhlighter/shCore.js"></script>
+<script type="text/javascript" src="../synhlighter/shBrushCpp.js"></script>
+<link type="text/css" rel="stylesheet" href="../synhlighter/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<pre class="brush: c;">
+// Prototype
+bool strxHas(const STRX_CHAR *str, const STRX_CHAR *key, STRX_FLAGS f);
+
+// NOTE:
+// This function is actually a shortcut.
+// It calls strxCount() with STRX_COUNT_ONE_ONLY flag.
+</pre>
+
+<pre class="brush: c;">
+const char *str = "Where do you want to go today?";
+if (strxHas(str, "you", STRX_CASE_INSENSITIVE))
+{
+	// str contains "you"...
+}
+</pre>
+

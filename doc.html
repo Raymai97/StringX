@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>StringX documentation</title>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<script type="text/javascript">
+		var docLink;
+		
+		function onload(){
+			if (window.name != "") { loadDoc(window.name);}
+		}
+		function loadDoc(keyword){
+			// load and memorize the keyword
+			var docBox = document.getElementById("docBox");
+			docBox.src = './doc/strx' + keyword + '.html';
+			window.name = keyword;
+			// undo prev highlight, and highlight current
+			if (docLink != null){
+				docLink.style.color = "#0000FF";
+				docLink.style.fontWeight = "normal";
+			}
+			docLink = document.getElementById(keyword);
+			docLink.style.color = "#FF0000";
+			docLink.style.fontWeight = "bold";
+		}
+		</script>
+	</head>
+	<body onload="onload();"><div id="wrap">
+		<div id="wrap1">
+		<div id="site_title">StringX
+			<table id="site_navbar">
+				<td><a class="navbarItem" href="./index.html">introduction</a></td>
+				<td><a class="navbarItem selected" href="./doc.html">documentation</td>
+				<td><a class="navbarItem" href="https://www.github.com/raymai97/StringX/">get on github</a></td>
+			</table>
+		</div>
+		<div id="site_subtitle">A free lightweight string processing library for C</div><p>
+		</div>
+		<div id="wrap2">
+		<table class="docTable" style="float:left; width: 68%;">
+			<tr><th>Function</th><th>Return value</th></tr>
+			<tr><td><a class="code" id="Is" href="#" onclick="loadDoc('Is')">strxIs</a></td>
+				<td>True if str1 Is str2</td></tr>
+			<tr><td><a class="code" id="Has" href="#" onclick="loadDoc('Has')">strxHas</a></td>
+				<td>True if str Contains key </td></tr>
+			<tr><td><a class="code" id="Count" href="#" onclick="loadDoc('Count')">strxCount</a></td>
+				<td>Number of key contained in str </td></tr>
+			<tr><td><a class="code" id="IndexOf" href="#" onclick="loadDoc('IndexOf')">strxIndexOf</a></td>
+				<td>Index of FIRST key in str </td></tr>
+			<tr><td><a class="code" id="LastIndexOf" href="#" onclick="loadDoc('LastIndexOf')">strxLastIndexOf</a></td>
+				<td>Index of LAST key in str </td></tr>
+			<tr><td><a class="code" id="Split" href="#" onclick="loadDoc('Split')">strxSplit</a></td>
+				<td>Number of splitted strings </td></tr>
+			<tr><td><a class="code" id="Cat" href="#" onclick="loadDoc('Cat')">strxCat</a></td>
+				<td>String concatenated from multiple strings</td></tr>
+			<tr><td><a class="code" id="Substr" href="#" onclick="loadDoc('Substr')">strxSubstr</a></td>
+				<td>String extracted from index A for B chars </td></tr>
+			<tr><td><a class="code" id="UpperAndLower" href="#" onclick="loadDoc('UpperAndLower')">strxUpper and strxLower</a></td>
+				<td>String in UPPER or lower case </td></tr>
+		</table>
+		<table class="docTable" style="float: right; width: 30%;">
+			<tr><th>Flag</th></tr>
+			<tr><td><div class="code">STRX_NO_FLAG</div>
+			* Case sensitive<br>
+			* Treat key/delim as a word<br>
+			* Count until end of string<br>
+			* Count key/delim<br>
+			</td></tr>
+			<tr><td><div class="code">STRX_CASE_INSENSITIVE</div></td></tr>
+			<tr><td><div class="code">STRX_KEY_AS_SINGLE_CHAR</div>(Treat key/delim as a series of char)</td></tr>
+			<tr><td><div class="code">STRX_COUNT_ONE_ONLY</div></td></tr>
+			<tr><td><div class="code">STRX_COUNT_NOT_KEY</div>(Count any chars that IS NOT key/delim)</td></tr>
+		</table>
+		<br>
+		<iframe id="docBox" frameborder="0" width="100%" height="500px"></iframe><br>
+		</div>
+		<div id="wrap3">
+		This website uses slightly-modified <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a>.<br>
+		</div>
+	</div></body>
+</html>

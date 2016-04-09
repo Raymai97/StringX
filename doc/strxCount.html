@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="../synhlighter/shCore.js"></script>
+<script type="text/javascript" src="../synhlighter/shBrushCpp.js"></script>
+<link type="text/css" rel="stylesheet" href="../synhlighter/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<pre class="brush: c;">
+// Prototype
+size_t strxCount(const STRX_CHAR *str, const STRX_CHAR *key, STRX_FLAGS f);
+</pre>
+
+<pre class="brush: c;">
+// Count got how many "can"
+STRX_FLAGS f = STRX_CASE_INSENSITIVE;
+const char *str = "Can you can a can like a canner can can a can?";
+size_t count = strxCount(str, "can", f);
+</pre>
+
+<pre class="brush: c;">
+// Count got how many 'a','e','i','o','u'
+STRX_FLAGS f = STRX_CASE_INSENSITIVE | STRX_KEY_AS_SINGLE_CHAR;
+const char *str = "Sky is blue, rose is red, I'm trash talking and I know it.";
+size_t count = strxCount(str, "aeiou", f);
+</pre>
+
+<pre class="brush: c;">
+// Count how many char is NOT number
+STRX_FLAGS f = STRX_CASE_INSENSITIVE | STRX_KEY_AS_SINGLE_CHAR | STRX_COUNT_NOT_KEY;
+const char *str = "31415926535foobar";
+size_t count = strxCount(str, "1234567890", f);
+</pre>
